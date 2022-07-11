@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+<form action="/delete" method="post">
+    <% posts.forEach(i => { %>
+        <% let title = i.title %> 
+        <% let content = i.content %> 
+       <h1 class="reveal" >  <%= title %> </h1> 
+       <p class="reveal" >  <%= content.slice(0, 101) + "..." %> <a href="/<%=title%>">Read more</a> <input type="checkbox" name="delContent" value="<%=title%>" onChange="this.form.submit()"> </p> 
+    <% });                  %>
+</form>  
+<button class="btn btn-light zoom"><a href="/compose">Compose</a></button>
+
+<%- include("partials/footer") -%>
