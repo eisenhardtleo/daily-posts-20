@@ -1,3 +1,3 @@
 # daily-posts-20
 
-deployed app available here -> https://daily-posts-21.herokuapp.com/
+deployed app available here -> https://web-production-dffa.up.railway.app/
